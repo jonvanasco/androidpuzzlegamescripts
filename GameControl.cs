@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bear : MonoBehaviour
+public class GameControl : MonoBehaviour
 {
-    [SerializedField]
-	private GameObject winText;
+    [SerializeField]
+    private GameObject winText;
 
     // Start is called before the first frame update
     void Start()
@@ -16,9 +16,9 @@ public class Bear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		
-	if (Bear.locked && Koala.locked && Hare.locked)
-		winText.setActive(true);
-		
+
+        if (Bear.locked && Capsule.locked && Circle.locked)
+            winText.SetActive(true);
+
     }
 }
